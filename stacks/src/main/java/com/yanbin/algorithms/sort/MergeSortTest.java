@@ -1,6 +1,7 @@
 package com.yanbin.algorithms.sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * 归并排序
@@ -9,16 +10,46 @@ import java.util.Arrays;
  * @date 2017/11/17 17:50
  */
 public class MergeSortTest {
+    private static final int LENGTH = 100000;
+    private static final int RANDOM = 1000000;
 
     public static void main(String[] args) {
-        int[] arrA = {1,3,7,9};
-
-        int[] arrB = {2,4,5,8,10,12};
 
 
-        int[] arrC = mergeSort(arrA, arrA.length, arrB, arrB.length);
+        int[] arr = new int[LENGTH];
 
-        System.out.println(Arrays.toString(arrC));
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = -(RANDOM - i);//;new Random().nextInt(RANDOM);
+        }
+        System.out.println(Arrays.toString(arr));
+        long startTime = System.currentTimeMillis();
+        new MergeSort(arr);
+        long endTime = System.currentTimeMillis();
+        System.out.println(Arrays.toString(arr));
+        System.out.println("归并排序用时---：" + (endTime - startTime) + "毫秒");
+
+        /*for(int i = 0; i < arr.length; i++) {
+            arr[i] = RANDOM - i;
+        }
+        //System.out.println(Arrays.toString(arr));
+        startTime = System.currentTimeMillis();
+        new InsertSort(arr);
+        endTime = System.currentTimeMillis();
+       // System.out.println(Arrays.toString(arr));
+        System.out.println("插入排序用时---：" + (endTime - startTime) + "毫秒");*/
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = -(RANDOM - i);
+        }
+        System.out.println(Arrays.toString(arr));
+        startTime = System.currentTimeMillis();
+        new ShellSort(arr);
+        endTime = System.currentTimeMillis();
+         System.out.println(Arrays.toString(arr));
+        System.out.println("希尔排序用时---：" + (endTime - startTime) + "毫秒");
+       /* int[] arrC = mergeSort(arrA, arrA.length, arrB, arrB.length);
+
+        System.out.println(Arrays.toString(arrC));*/
     }
 
     private static int[] mergeSort(int[] arrA, int sizeA, int[] arrB, int sizeB) {
