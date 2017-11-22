@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="011f9ee5-1e56-4209-880d-3214be542ae3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" afterPath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" afterPath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" />
-    </list>
+    <list default="true" id="011f9ee5-1e56-4209-880d-3214be542ae3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/stacks/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -507,12 +503,12 @@
       <workItem from="1510889293469" duration="9626000" />
       <workItem from="1510965799499" duration="5724000" />
       <workItem from="1511243427820" duration="10495000" />
-      <workItem from="1511317243281" duration="10938000" />
+      <workItem from="1511317243281" duration="11523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67918000" />
+    <option name="totallyTimeSpent" value="68503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
