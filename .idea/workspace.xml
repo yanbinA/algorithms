@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011f9ee5-1e56-4209-880d-3214be542ae3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" afterPath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" afterPath="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/stacks/target/" />
@@ -53,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeSortTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MergeSortTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="814">
+              <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSort.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
-              <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+              <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -85,22 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertSort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/InsertSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="934">
-              <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="461">
+              <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding>
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#811#812#0" expanded="true" />
+                <element signature="e#858#859#0" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,6 +118,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8360">
               <caret line="415" column="4" lean-forward="false" selection-start-line="415" selection-start-column="4" selection-end-line="415" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertSort.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/InsertSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -167,9 +175,9 @@
         <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/InToPostPower.java" />
         <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/InsertSort.java" />
         <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSort.java" />
-        <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" />
         <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/ShellSort.java" />
         <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java" />
       </list>
     </option>
   </component>
@@ -186,9 +194,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="650" />
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="625" />
+    <option name="y" value="355" />
     <option name="width" value="1284" />
     <option name="height" value="996" />
   </component>
@@ -498,15 +506,16 @@
       <workItem from="1510878612650" duration="8621000" />
       <workItem from="1510889293469" duration="9626000" />
       <workItem from="1510965799499" duration="5724000" />
-      <workItem from="1511243427820" duration="10460000" />
+      <workItem from="1511243427820" duration="10495000" />
+      <workItem from="1511317243281" duration="10938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56945000" />
+    <option name="totallyTimeSpent" value="67918000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -517,7 +526,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26847827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20217392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -528,7 +537,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026086956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28695652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -546,7 +555,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -563,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,19 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511258968864" expanded="true" signature="57523:57540" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57558" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57571" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57586" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57621:58004" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57634:57989" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57669:57975" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57688:57960" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57762:57940" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57802:57906" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57823:57884" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,19 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511258968864" expanded="true" signature="57523:57540" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57558" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57571" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57586" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57621:58004" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57634:57989" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57669:57975" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57688:57960" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57762:57940" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57802:57906" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57823:57884" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -683,7 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,19 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511258968864" expanded="true" signature="57523:57540" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57558" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57571" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57586" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57621:58004" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57634:57989" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57669:57975" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57688:57960" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57762:57940" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57802:57906" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57823:57884" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,7 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,19 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511258968864" expanded="true" signature="57523:57540" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57558" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57571" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57523:57586" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57621:58004" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57634:57989" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57669:57975" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57688:57960" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57762:57940" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57802:57906" ph="..." />
-            <marker date="1511258968864" expanded="true" signature="57823:57884" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="902">
           <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
           <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,24 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/ShellSort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -967,19 +895,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/InsertSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="396">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/QuickSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="934">
-          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="461">
+          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/sort/MergeSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

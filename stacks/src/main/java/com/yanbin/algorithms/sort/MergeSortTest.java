@@ -10,7 +10,7 @@ import java.util.Random;
  * @date 2017/11/17 17:50
  */
 public class MergeSortTest {
-    private static final int LENGTH = 100000;
+    private static final int LENGTH = 10000000;
     private static final int RANDOM = 1000000;
 
     public static void main(String[] args) {
@@ -18,38 +18,53 @@ public class MergeSortTest {
 
         int[] arr = new int[LENGTH];
 
-        for(int i = 0; i < arr.length; i++) {
-            arr[i] = -(RANDOM - i);//;new Random().nextInt(RANDOM);
-        }
-        System.out.println(Arrays.toString(arr));
-        long startTime = System.currentTimeMillis();
-        new MergeSort(arr);
-        long endTime = System.currentTimeMillis();
-        System.out.println(Arrays.toString(arr));
-        System.out.println("归并排序用时---：" + (endTime - startTime) + "毫秒");
 
-        /*for(int i = 0; i < arr.length; i++) {
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = new Random().nextInt(RANDOM);
+        }
+        //System.out.println(Arrays.toString(arr));
+        long startTime = System.currentTimeMillis();
+        QuickSort quickSort = new QuickSort(arr);
+        quickSort.startQuickSort();
+        long endTime = System.currentTimeMillis();
+        //System.out.println(Arrays.toString(arr));
+        System.out.println("快速排序用时---：" + (endTime - startTime) + "毫秒");
+       /* for(int i = 0; i < arr.length; i++) {
             arr[i] = RANDOM - i;
         }
         //System.out.println(Arrays.toString(arr));
         startTime = System.currentTimeMillis();
-        new InsertSort(arr);
+        QuickSort quickSort1 = new QuickSort(arr);
+        quickSort1.startQuickSort();
         endTime = System.currentTimeMillis();
-       // System.out.println(Arrays.toString(arr));
-        System.out.println("插入排序用时---：" + (endTime - startTime) + "毫秒");*/
+
+        //System.out.println(Arrays.toString(arr));
+        System.out.println("快速排序 极端情况 用时---：" + (endTime - startTime) + "毫秒");*/
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = new Random().nextInt(RANDOM);
+        }
+        //System.out.println(Arrays.toString(arr));
+        startTime = System.currentTimeMillis();
+        QuickSort quickSort2 = new QuickSort(arr);
+        quickSort2.startPowerSort();
+        endTime = System.currentTimeMillis();
+
+        //System.out.println(Arrays.toString(arr));
+        System.out.println("加强快速排序 极端情况 用时---：" + (endTime - startTime) + "毫秒");
 
         for(int i = 0; i < arr.length; i++) {
-            arr[i] = -(RANDOM - i);
+            arr[i] = new Random().nextInt(RANDOM);
         }
-        System.out.println(Arrays.toString(arr));
+        //System.out.println(Arrays.toString(arr));
         startTime = System.currentTimeMillis();
-        new ShellSort(arr);
+        QuickSort quickSort3 = new QuickSort(arr);
+        quickSort3.startPowerSort(10);
         endTime = System.currentTimeMillis();
-         System.out.println(Arrays.toString(arr));
-        System.out.println("希尔排序用时---：" + (endTime - startTime) + "毫秒");
-       /* int[] arrC = mergeSort(arrA, arrA.length, arrB, arrB.length);
 
-        System.out.println(Arrays.toString(arrC));*/
+        //System.out.println(Arrays.toString(arr));
+        System.out.println("终极版 快速排序 极端情况 用时---：" + (endTime - startTime) + "毫秒");
+
     }
 
     private static int[] mergeSort(int[] arrA, int sizeA, int[] arrB, int sizeB) {
