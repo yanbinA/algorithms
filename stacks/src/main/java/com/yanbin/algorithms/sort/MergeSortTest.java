@@ -30,17 +30,7 @@ public class MergeSortTest {
         long endTime = System.currentTimeMillis();
         //System.out.println(Arrays.toString(arr));
         System.out.println("快速排序用时---：" + (endTime - startTime) + "毫秒");
-       /* for(int i = 0; i < arr.length; i++) {
-            arr[i] = RANDOM - i;
-        }
-        //System.out.println(Arrays.toString(arr));
-        startTime = System.currentTimeMillis();
-        QuickSort quickSort1 = new QuickSort(arr);
-        quickSort1.startQuickSort();
-        endTime = System.currentTimeMillis();
 
-        //System.out.println(Arrays.toString(arr));
-        System.out.println("快速排序 极端情况 用时---：" + (endTime - startTime) + "毫秒");*/
         for(int i = 0; i < arr.length; i++) {
             arr[i] = new Random().nextInt(RANDOM);
         }
