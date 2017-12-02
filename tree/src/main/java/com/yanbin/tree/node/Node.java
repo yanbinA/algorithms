@@ -58,8 +58,6 @@ public class Node<T> {
         return "Node{" +
                 "data=" + data +
                 ", key=" + key +
-                ", leftChild=" + leftChild +
-                ", rightChild=" + rightChild +
                 '}';
     }
 }

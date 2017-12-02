@@ -25,9 +25,11 @@ public class Test {
         tree.insert(node6);
         tree.insert(node4);
         tree.insert(node5);
-        System.out.println(node);
+        tree.display();
+        tree.show();
         tree.delete(20);
         System.out.println("--------------------");
-        System.out.println(node);
+        tree.display();
+        tree.show();
     }
 }

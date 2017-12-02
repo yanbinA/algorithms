@@ -120,7 +120,7 @@ public class Tree<T> {
      * 删除节点
      * 如果 节点为叶节点 直接移出树
      * 如果 节点只有一个子节点，将子节点 移到当前节点位置
-     * 如果 节点有两个子节点，将左子节点 复制到 当前节点位置，(删除左子节点);设置右子节点为新节点的右节点，
+     * 如果 节点有两个子节点，寻找后继节点：在左子树寻找最大值的节点代替被删除的节点，或者在右子树中寻找最小值节点代替被删除节点
      * @param parent    指定删除节点的父节点
      * @param current   指定删除的节点
      * @param isLeftChild   current和parent的关系
@@ -150,14 +150,26 @@ public class Tree<T> {
                 parent.setRightChild(current.getLeftChild());
             }
         } else {
-            // 如果 节点有两个子节点，将左子节点 复制到 当前节点位置，(删除左子节点);设置右子节点为新节点的右节点，
-            if (isLeftChild) {
-                parent.setLeftChild(current.getLeftChild());
-            } else {
-                parent.setRightChild(current.getLeftChild());
+            // 寻找后继节点：右子树中寻找最小值节点代替被删除节点
+            Node<T> successorParent = current.getRightChild();
+            Node<T> successor = current.getRightChild();
+            while (successor.getLeftChild() != null) {
+                successorParent = successor;
+                successor = successor.getLeftChild();
             }
-            deleteNode(current.getLeftChild(), current.getLeftChild(), true);
-            current.getLeftChild().setRightChild(current.getRightChild());
+            //如果后继节点不是删除节点的右子节点
+            if (successor != current.getRightChild()) {
+                successorParent.setLeftChild(successor.getRightChild());
+
+                successor.setRightChild(current.getRightChild());
+            }
+            successor.setLeftChild(current.getLeftChild());
+            if (isLeftChild) {
+                parent.setLeftChild(successor);
+            } else {
+                parent.setRightChild(successor);
+            }
+
         }
 
 
@@ -166,5 +178,38 @@ public class Tree<T> {
 
     public int getSize() {
         return size.get();
+    }
+
+    /**
+     * 中序遍历树：先左子节点 节点本身 右子节点
+     * 后序遍历：先左子节点 右子节点 节点本身
+     * 前序遍历：先节点本身 左子节点 右子节点
+     * 这里采用中序遍历
+     */
+    public void display() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node<T> root) {
+
+        if (root != null) {
+            inOrder(root.getLeftChild());
+            System.out.println(root);
+            inOrder(root.getRightChild());
+        }
+    }
+
+    public void show() {
+        System.out.println(root);
+        showTree(root);
+    }
+
+    private void showTree(Node<T> root) {
+        if (root != null) {
+            System.out.print("|" + root.getLeftChild() + "-" + root.getRightChild() + "|");
+            showTree(root.getLeftChild());
+            showTree(root.getRightChild());
+
+        }
     }
 }
