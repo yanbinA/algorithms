@@ -40,7 +40,6 @@ public class Stacks<T> implements Structure<T>{
         Object[] oldArray = stackArray;
         stackArray = new Object[maxSize];
         System.arraycopy(oldArray, 0, stackArray, 0, oldArray.length);
-        System.out.println("----------扩展大小" + maxSize);
     }
 
     @Override

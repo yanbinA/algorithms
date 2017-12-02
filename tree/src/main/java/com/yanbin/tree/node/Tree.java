@@ -1,6 +1,7 @@
 package com.yanbin.tree.node;
 
 import com.sun.xml.internal.ws.util.Pool;
+import com.yanbin.algorithms.structure.Stacks;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -15,6 +16,7 @@ public class Tree<T> {
      */
     private Node<T> root;
     private AtomicInteger size = new AtomicInteger(0);
+
 
     public Tree(){}
 
@@ -78,9 +80,9 @@ public class Tree<T> {
                 } else {
                     current = current.getRightChild();
                 }
-
             }
         }
+
         return size.get();
     }
 
@@ -129,7 +131,9 @@ public class Tree<T> {
         //如果 节点为叶节点 直接移出树
 
         if (current.getRightChild() == null && current.getLeftChild() == null) {
-            if (isLeftChild) {
+            if (root == current) {
+                root = null;
+            } else if (isLeftChild) {
                 parent.setLeftChild(null);
             } else {
                 parent.setRightChild(null);
@@ -137,14 +141,18 @@ public class Tree<T> {
 
         } else if (current.getLeftChild() == null) {
             // 如果 节点只有一个子节点，将子节点 移到当前节点位置
-            if (isLeftChild) {
+            if (root == current) {
+                root = current.getRightChild();
+            } else if (isLeftChild) {
                 parent.setLeftChild(current.getRightChild());
             } else {
                 parent.setRightChild(current.getRightChild());
             }
         } else if (current.getRightChild() == null) {
             // 如果 节点只有一个子节点，将子节点 移到当前节点位置
-            if (isLeftChild) {
+            if (root == current) {
+                root = current.getLeftChild();
+            } else if (isLeftChild) {
                 parent.setLeftChild(current.getLeftChild());
             } else {
                 parent.setRightChild(current.getLeftChild());
@@ -164,7 +172,9 @@ public class Tree<T> {
                 successor.setRightChild(current.getRightChild());
             }
             successor.setLeftChild(current.getLeftChild());
-            if (isLeftChild) {
+            if (root == current) {
+                root = successor;
+            } else if (isLeftChild) {
                 parent.setLeftChild(successor);
             } else {
                 parent.setRightChild(successor);
@@ -211,5 +221,53 @@ public class Tree<T> {
             showTree(root.getRightChild());
 
         }
+    }
+
+    /**
+     * 展示树
+     */
+    public void displayTree() {
+        Stacks<Node<T>> globalStack  = new Stacks<>();
+        globalStack.push(root);
+        //定义空白位置，
+        int nBlanks = 32;
+        boolean isRowEmpty = false;
+        System.out.println("-------------------------------------------");
+
+        while (!isRowEmpty) {
+            Stacks<Node<T>> localStack  = new Stacks<>();
+            isRowEmpty = true;
+            //打印空白
+            for (int i = 0; i < nBlanks; i++) {
+                System.out.print(" ");
+            }
+            //打印一层
+            while (!globalStack.isEmpty()) {
+                Node<T> temp = globalStack.pop();
+                if (temp != null) {
+                    System.out.print(temp.getData());
+                    //将子节点放入本地栈
+                    localStack.push(temp.getLeftChild());
+                    localStack.push(temp.getRightChild());
+                    if (temp.getLeftChild() != null || temp.getRightChild() != null) {
+                        isRowEmpty = false;
+                    }
+                } else {
+                    System.out.print("--");
+                    localStack.push(null);
+                    localStack.push(null);
+                }
+                for (int i = 0; i < nBlanks * 2 -2; i++) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            nBlanks /= 2;
+            //将本地栈放入全局栈
+            while (!localStack.isEmpty()) {
+                globalStack.push(localStack.pop());
+            }
+        }
+        System.out.println("-------------------------------------------");
     }
 }
