@@ -1,7 +1,7 @@
 package com.yanbin.tree;
 
-import com.yanbin.tree.node.Node;
-import com.yanbin.tree.node.Tree;
+import com.yanbin.tree.searchTree.Node;
+import com.yanbin.tree.searchTree.Tree;
 
 import java.util.Scanner;
 

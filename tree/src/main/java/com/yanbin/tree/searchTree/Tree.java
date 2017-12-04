@@ -1,6 +1,5 @@
-package com.yanbin.tree.node;
+package com.yanbin.tree.searchTree;
 
-import com.sun.xml.internal.ws.util.Pool;
 import com.yanbin.algorithms.structure.Stacks;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -253,11 +252,11 @@ public class Tree<T> {
                         isRowEmpty = false;
                     }
                 } else {
-                    System.out.print("--");
+                    System.out.print("-");
                     localStack.push(null);
                     localStack.push(null);
                 }
-                for (int i = 0; i < nBlanks * 2 -2; i++) {
+                for (int i = 0; i < nBlanks * 2 -1; i++) {
                     System.out.print(" ");
                 }
             }

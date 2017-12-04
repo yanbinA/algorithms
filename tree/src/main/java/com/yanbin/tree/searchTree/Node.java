@@ -1,4 +1,4 @@
-package com.yanbin.tree.node;
+package com.yanbin.tree.searchTree;
 
 /**
  * 二叉树 节点对象
