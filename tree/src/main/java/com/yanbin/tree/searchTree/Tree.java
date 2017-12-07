@@ -15,13 +15,14 @@ public class Tree<T> {
      */
     private Node<T> root;
     private AtomicInteger size = new AtomicInteger(0);
-
+    private static int floor = -1;
 
     public Tree(){}
 
     public Tree( Node<T> root) {
         this.root = root;
         this.size.incrementAndGet();
+        floor = 0;
     }
 
     /**
@@ -56,12 +57,14 @@ public class Tree<T> {
     public int insert(Node<T> node) {
         if (root == null) {
             root = node;
+            floor = 0;
             return size.incrementAndGet();
         }
 
         Node<T> current = root;
-
+        int localFloor = 0;
         while (true) {
+            localFloor++;
             if (current.getKey() > node.getKey()) {
                 //右节点为null，直接插入；不为空，移动current指向右子节点
                 if (current.getLeftChild() == null) {
@@ -80,7 +83,9 @@ public class Tree<T> {
                     current = current.getRightChild();
                 }
             }
+
         }
+        floor = floor < localFloor ? localFloor : floor;
 
         return size.get();
     }
@@ -114,7 +119,24 @@ public class Tree<T> {
             }
         }
         deleteNode(parent, current, isLeftChild);
-        return null;
+        floor = updateFloor(root);
+        return current;
+    }
+
+    /**
+     * 计算树的层数
+     * @param root  树的根节点
+     * @return  层数
+     */
+    private int updateFloor(Node<T> root) {
+        if (root == null) {
+            return -1;
+        }
+        int leftFloor = updateFloor(root.getLeftChild());
+        int rightFloor = updateFloor(root.getRightChild());
+        int childFloor = leftFloor > rightFloor ? leftFloor : rightFloor;
+
+        return childFloor + 1;
     }
 
     /**
@@ -229,9 +251,9 @@ public class Tree<T> {
         Stacks<Node<T>> globalStack  = new Stacks<>();
         globalStack.push(root);
         //定义空白位置，
-        int nBlanks = 32;
+        int nBlanks = 2 << (floor + 1);
         boolean isRowEmpty = false;
-        System.out.println("-------------------------------------------");
+        System.out.println("-------------------------------------------" + nBlanks);
 
         while (!isRowEmpty) {
             Stacks<Node<T>> localStack  = new Stacks<>();
@@ -267,6 +289,6 @@ public class Tree<T> {
                 globalStack.push(localStack.pop());
             }
         }
-        System.out.println("-------------------------------------------");
+        System.out.println("----------------------------floor:" + floor);
     }
 }
