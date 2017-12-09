@@ -1,5 +1,7 @@
 package com.yanbin.tree.tree234;
 
+import java.util.Arrays;
+
 /**
  * 2-3-4树的节点对象
  * @author yanbin
@@ -34,7 +36,7 @@ public class Node {
      * @param item  待插入的数据项
      * @return  插入位置
      */
-    public int insert(DataItem item) {
+    public int insertItem(DataItem item) {
         //itemArray从后往前遍历，找到合适插入点
         int i = ORDER - 2;
         for (; i >= 0; i--) {
@@ -62,7 +64,7 @@ public class Node {
      * @param key   指定key
      * @return  数据项在数组itemArray中的index,不存在返回 -1
      */
-    public int find(int key) {
+    public int findItem(int key) {
 
         for (int i = 0; i < ORDER - 1; i++) {
             if (itemArray[i] == null) {
@@ -108,6 +110,39 @@ public class Node {
         return childNode;
     }
 
+    /**
+     * 当前节点是否已满
+     * @return  true:已满；false：未满
+     */
+    public boolean isFull() {
+        return numItems == ORDER - 1;
+    }
+
+    /**
+     * 当前节点是否叶节点
+     * @return true:叶节点;false:非叶节点
+     */
+    public boolean isLeaf() {
+        return childNodes[0] == null;
+    }
+
+    /**
+     * 通过key查找下一个子节点，当前节点找不到该key
+     * @param key   指定的key
+     * @return  值范围包含key的子节点
+     */
+    public Node getNextChild(int key) {
+        int numItems = this.getNumItems();
+
+        for (int i = 0; i < numItems; i++) {
+            if (itemArray[i].getKey() > key) {
+                return childNodes[i];
+            }
+        }
+        return childNodes[numItems];
+    }
+
+
     public Node getChildNode(int childNum) {
         return childNodes[childNum];
     }
@@ -142,5 +177,23 @@ public class Node {
 
     public void setNumItems(int numItems) {
         this.numItems = numItems;
+    }
+
+    public String disPlay() {
+        StringBuilder sb = new StringBuilder();
+        for (DataItem item : itemArray) {
+            sb.append(item != null ? item.toString() : "");
+        }
+        sb.append("/");
+        return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "childNodes=" + Arrays.toString(childNodes) +
+                ", itemArray=" + Arrays.toString(itemArray) +
+                ", numItems=" + numItems +
+                '}';
     }
 }

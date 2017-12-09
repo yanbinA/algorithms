@@ -20,4 +20,9 @@ public class DataItem {
     public void setKey(int key) {
         this.key = key;
     }
+
+    @Override
+    public String toString() {
+        return "/" + key;
+    }
 }
