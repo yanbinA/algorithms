@@ -45,7 +45,9 @@ public class Node {
                 continue;
             }
             DataItem temp = itemArray[i];
-            if (item.getKey() >= temp.getKey()) {
+            if (item.getKey() == temp.getKey()) {
+                return -1;
+            } else if (item.getKey() > temp.getKey()) {
                 //找到插入点跳出循环
                 break;
             } else {
@@ -84,6 +86,22 @@ public class Node {
         DataItem dataItem = itemArray[--numItems];
         itemArray[numItems] = null;
         return dataItem;
+    }
+
+    /**
+     * 移除指定数据项
+     * @param key 指定数据项
+     * @return key在itemArray中的位置index
+     */
+    public int removeItem(int key) {
+        int indexItem;
+        if ((indexItem = this.findItem(key)) == -1) {
+            return -1;
+        } else {
+            itemArray[indexItem] = null;
+            return indexItem;
+        }
+
     }
 
     /**
@@ -127,6 +145,16 @@ public class Node {
     }
 
     /**
+     * 是否为2节点
+     * @return  true:是二节点
+     */
+    public boolean isTwoNode() {
+        return numItems == 1;
+    }
+
+
+
+    /**
      * 通过key查找下一个子节点，当前节点找不到该key
      * @param key   指定的key
      * @return  值范围包含key的子节点
@@ -142,6 +170,21 @@ public class Node {
         return childNodes[numItems];
     }
 
+    /**
+     * 当前节点的子节点可以包含key的子节点的index
+     * @param key 指定的key
+     * @return  子节点的index
+     */
+    public int getNextChildIndex(int key) {
+        int numItems = this.getNumItems();
+
+        for (int i = 0; i < numItems; i++) {
+            if (itemArray[i].getKey() > key) {
+                return i;
+            }
+        }
+        return numItems;
+    }
 
     public Node getChildNode(int childNum) {
         return childNodes[childNum];
