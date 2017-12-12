@@ -1,6 +1,7 @@
 package com.yanbin.tree.tree234;
 
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 /**
  * 2-3-4树的节点对象
@@ -9,7 +10,6 @@ import java.util.Arrays;
  */
 public class Node {
     private static final int ORDER = 4;
-
     /**
      * 子节点的引用数组
      */
@@ -26,6 +26,7 @@ public class Node {
      * 节点数据项个数
      */
     private int numItems;
+    private Logger logger = Logger.getLogger("Node");
 
     public Node(){
 
@@ -38,6 +39,8 @@ public class Node {
      */
     public int insertItem(DataItem item) {
         //itemArray从后往前遍历，找到合适插入点
+        logger.info("start insertItem : " + Arrays.toString(itemArray));
+        logger.info(this::toString);
         int i = ORDER - 2;
         for (; i >= 0; i--) {
             //跳过空元素
@@ -45,9 +48,7 @@ public class Node {
                 continue;
             }
             DataItem temp = itemArray[i];
-            if (item.getKey() == temp.getKey()) {
-                return -1;
-            } else if (item.getKey() > temp.getKey()) {
+            if (item.getKey() >= temp.getKey()) {
                 //找到插入点跳出循环
                 break;
             } else {
@@ -58,6 +59,8 @@ public class Node {
         }
         itemArray[++i] = item;
         numItems++;
+        logger.info("insertItem:" + item + ", in " + i + ", the Node items:" + Arrays.toString(itemArray));
+        logger.info(this::toString);
         return i;
     }
 
@@ -83,26 +86,15 @@ public class Node {
      * @return  被移除的数据项
      */
     public DataItem removeItem() {
+        logger.info("start removeItem : " + Arrays.toString(itemArray));
+        logger.info(this::toString);
         DataItem dataItem = itemArray[--numItems];
         itemArray[numItems] = null;
+        logger.info("insertItem:" + dataItem + ", in " + numItems + ", the Node items:" + Arrays.toString(itemArray));
+        logger.info(this::toString);
         return dataItem;
     }
 
-    /**
-     * 移除指定数据项
-     * @param key 指定数据项
-     * @return key在itemArray中的位置index
-     */
-    public int removeItem(int key) {
-        int indexItem;
-        if ((indexItem = this.findItem(key)) == -1) {
-            return -1;
-        } else {
-            itemArray[indexItem] = null;
-            return indexItem;
-        }
-
-    }
 
     /**
      * 关联子节点，
@@ -110,11 +102,15 @@ public class Node {
      * @param node  子节点
      */
     public void connectChild(int childNum, Node node) {
+        logger.info("start connectChild:" + node + "in" + childNum);
+        logger.info(this::toString);
         childNodes[childNum] = node;
         //设置父节点
         if (node != null) {
             node.setParent(this);
         }
+        logger.info("end connectChild:");
+        logger.info(this::toString);
     }
 
     /**
@@ -123,8 +119,12 @@ public class Node {
      * @return 被取消的子节点
      */
     public Node disConnectChild(int childNum) {
+        logger.info("start disConnectChild:" + childNodes[childNum]);
+        logger.info(this::toString);
         Node childNode = childNodes[childNum];
         childNodes[childNum] = null;
+        logger.info("end disConnectChild:");
+        logger.info(this::toString);
         return childNode;
     }
 
@@ -152,7 +152,13 @@ public class Node {
         return numItems == 1;
     }
 
-
+    /**
+     * 移除元素
+     * @param num   被移除的个数
+     */
+    public void removeItem(int num) {
+        this.numItems -= num;
+    }
 
     /**
      * 通过key查找下一个子节点，当前节点找不到该key
@@ -160,6 +166,10 @@ public class Node {
      * @return  值范围包含key的子节点
      */
     public Node getNextChild(int key) {
+        if (this.isLeaf()) {
+            return null;
+        }
+
         int numItems = this.getNumItems();
 
         for (int i = 0; i < numItems; i++) {
@@ -176,6 +186,7 @@ public class Node {
      * @return  子节点的index
      */
     public int getNextChildIndex(int key) {
+
         int numItems = this.getNumItems();
 
         for (int i = 0; i < numItems; i++) {
@@ -225,7 +236,7 @@ public class Node {
     public String disPlay() {
         StringBuilder sb = new StringBuilder();
         for (DataItem item : itemArray) {
-            sb.append(item != null ? item.toString() : "");
+            sb.append(item != null ? item.toString() : "/ ");
         }
         sb.append("/");
         return sb.toString();
@@ -238,5 +249,19 @@ public class Node {
                 ", itemArray=" + Arrays.toString(itemArray) +
                 ", numItems=" + numItems +
                 '}';
+    }
+
+    /**
+     * 删除节点中指定的key
+     * @param key   指定key
+     */
+    public void remove(int key) {
+        for (int i = 0; i < this.numItems; i++) {
+            if (itemArray[i].getKey() == key) {
+                System.arraycopy(itemArray, i + 1, itemArray, i, numItems - i -1);
+                removeItem();
+                break;
+            }
+        }
     }
 }

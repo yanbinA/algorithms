@@ -4,6 +4,7 @@ import com.yanbin.tree.searchTree.Node;
 import com.yanbin.tree.searchTree.Tree;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * @author yanbin
@@ -15,6 +16,7 @@ public class Test {
         boolean isRunner = true;
         Tree<Integer> tree = new Tree<>();
         while (isRunner) {
+
             System.out.print("Enter first letter of show('quit'),\ninsert, find, delete:\n");
             String choice = getString();
             switch (choice) {

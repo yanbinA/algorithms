@@ -1,9 +1,9 @@
 package com.yanbin.tree.tree234;
 
 import com.yanbin.algorithms.structure.Stacks;
-import com.yanbin.tree.searchTree.Tree;
 
-import javax.lang.model.element.VariableElement;
+import java.util.logging.Logger;
+
 
 /**
  * 2-3-4树
@@ -13,6 +13,7 @@ import javax.lang.model.element.VariableElement;
 public class Tree234 {
 
     private Node root;
+    private Logger logger = Logger.getLogger("Tree234");
 
     public Tree234() {
         this.root = new Node();
@@ -86,17 +87,75 @@ public class Tree234 {
      * @param key   删除的key
      */
     public void delete(int key) {
-        Node current = this.root;
-        if (current != root && current.isTwoNode()) {
-            //合并节点
-            merge(current);
+        logger.info("start delete:" + key);
+        deleteKey(root, key);
+        logger.info("end delete:" + key);
+
+    }
+
+    private void deleteKey(Node root, int key) {
+        logger.info("start deleteKey:" + key + " in " + root);
+        logger.info(this.root.toString());
+        Node current = root;
+        while (current != null) {
+            logger.info("start while in deleteKey" + key);
+            if (current != this.root && current.isTwoNode()) {
+                //合并节点
+                logger.info("ready merge node:" + current);
+                merge(current);
+                if (current == this.root) {
+                    logger.info("merged node is root");
+                    current = current.getNextChild(key);
+                    logger.info("the new current is " + current);
+                } else {
+                    logger.info("merged node note root");
+                    current = current.getParent().getNextChild(key);
+                    logger.info("the new current is " + current);
+                }
+            }
+
+            int itemIndex = current.findItem(key);
+            logger.info("findItem in " + itemIndex);
+            if (itemIndex != -1) {
+                //找到该key值，如果不是叶节点寻找后继key值，是叶节点直接删除
+                if (current.isLeaf()) {
+                    current.remove(key);
+                    logger.info("the node is leaf ,remove key " + key);
+
+                } else {
+                    logger.info("ready successor with " + key + " in " + current + ", " + itemIndex);
+                    int newKey = successor(current, itemIndex);
+                    logger.info("the node not leaf ,ready deleteKey  " + newKey);
+                    deleteKey(current.getChildNode(itemIndex + 1), newKey);
+                    logger.info("end the deleteKey  " + newKey);
+                }
+                logger.info("end while in deleteKey " + key);
+                break;
+            } else {
+                current = current.getNextChild(key);
+            }
         }
-        
-        
-        int itemIndex = current.findItem(key);
-        if (itemIndex != -1) {
-            
+        logger.info("end deleteKey:" + key + " in " + root);
+        logger.info(this.root.toString());
+    }
+
+    /**
+     * 在current节点为根的子树中需找itemIndex的后续值，并用后继值代替itemIndex上的值
+     * @param current   子树的根节点
+     * @param itemIndex     数据项的index
+     * @return  后继值
+     */
+    private int successor(Node current, int itemIndex) {
+        logger.info("start successor in " + current + ", " + itemIndex);
+        Node successorNode = current.getChildNode(itemIndex + 1);
+        while (!successorNode.isLeaf()) {
+            successorNode = successorNode.getChildNode(0);
         }
+        DataItem item = successorNode.getItemArray()[0];
+
+        current.getItemArray()[itemIndex] = item;
+        logger.info("end successor in " + current + ", " + itemIndex + " the successor " + item.getKey());
+        return item.getKey();
     }
 
     /**
@@ -136,34 +195,111 @@ public class Tree234 {
      * @param current 当前节点
      */
     private void merge(Node current) {
-
+        logger.info("start merge node " + current);
         Node parent = current.getParent();
         Node brother = null;
         DataItem parentItem, brotherItem, currentItem = current.getItemArray()[0];
+        boolean brotherIsTowNode = false;
         //current子节点在父节点parent的位置
-        int i = 0;
-        for (; i < parent.getNumItems(); i++) {
-            if (parent.getItemArray()[i].getKey() > currentItem.getKey()) {
+        int childIndex = 0;
+        for (; childIndex < parent.getNumItems(); childIndex++) {
+            if (parent.getItemArray()[childIndex].getKey() > currentItem.getKey()) {
                 //i可能为0，1，2，3
                 break;
             }
         }
+        logger.info("parent:" + parent);
+        logger.info("current item :" + currentItem);
+        logger.info("current子节点在父节点parent的位置:" + childIndex);
         //得到当前2节点的前兄弟节点（兄弟节点的brotherKey最小值），如果没有前兄弟节点则用后兄弟节点(brotherItem=最大值)
-        if (i == parent.getNumItems()) {
+        if (childIndex == parent.getNumItems()) {
+            logger.info("brother  current");
             //说明没有前兄弟节点,用后兄弟节点
-            brother = parent.getChildNode(i - 1);
-            brotherItem = brother.getItemArray()[brother.getNumItems()];
-            parentItem = parent.getItemArray()[i - 1];
-            if (brother.isTwoNode()) {
-
+            brother = parent.getChildNode(childIndex - 1);
+            brotherItem = brother.getItemArray()[brother.getNumItems() - 1];
+            parentItem = parent.getItemArray()[--childIndex];
+            brotherIsTowNode = brother.isTwoNode();
+            logger.info("parentItem:" + parentItem);
+            logger.info("brother:" + brother);
+            logger.info("brother item:" + brotherItem);
+            logger.info("brother is 2 nodes?" + brotherIsTowNode);
+            if (brotherIsTowNode) {
+                //1.3.2兄弟节点是当前节点的左节点(index-1),父节点中的key值位于index-1
+                //    1.3.2.1将兄弟节点和当前节点调换位置，当前节点=兄弟节点，兄弟节点=当前节点；
+                Node temp = current;
+                current = brother;
+                brother = temp;
+                logger.info("swap brother and current");
+            } else {
+                logger.info("do brother current and brother is 3/4 nodes" + parent);
+                logger.info("current:" + current);
+                // 2.1.1将父节点中的key插入当前节点
+                current.insertItem(parentItem);
+                //2.1.2将兄弟节点中的key代替父节点中原先的key，并移除兄弟节点中的key
+                parent.getItemArray()[childIndex] = brotherItem;
+                //2.1.3将当前节点的子节点往后(往右)移一位，
+                System.arraycopy(current.getChildNodes(), 0, current.getChildNodes(), 1, 2);
+                //2.1.4将兄弟节点的子节点(最右)放入当前节点的(0)
+                current.connectChild(0, brother.disConnectChild(brother.getNumItems()));
+                //2.1.5将兄弟节点的子节点(最右)移除
+                brother.removeItem();
+                logger.info("did brother current and brother is 3/4 nodes" + parent);
+                logger.info("current:" + current);
             }
         } else {
-            brother = parent.getChildNode(i + 1);
+            logger.info("current brother");
+            brother = parent.getChildNode(childIndex + 1);
             brotherItem = brother.getItemArray()[0];
-            parentItem = parent.getItemArray()[i];
+            parentItem = parent.getItemArray()[childIndex];
+            brotherIsTowNode = brother.isTwoNode();
+            logger.info("parentItem:" + parentItem);
+            logger.info("brother:" + brother);
+            logger.info("brother item:" + brotherItem);
+            logger.info("brother is 2 nodes?" + brotherIsTowNode);
+            if (!brotherIsTowNode) {
+                logger.info("do current brother and brother is 3/4 nodes" + parent);
+                logger.info("current:" + current);
+                //2.1.1将父节点中的key插入当前节点
+                current.insertItem(parentItem);
+                //2.1.2将兄弟节点中的key代替父节点中原先的key
+                parent.getItemArray()[childIndex] = brotherItem;
+                //2.1.3将兄弟节点的子节点(0，最左)放入当前节点的(2)
+                current.connectChild(2, brother.disConnectChild(0));
+                //2.1.4将兄弟节点的其他值往前(往左)移一位，子节点往前(往左)移一位，末位置null
+                System.arraycopy(brother.getChildNodes(), 1, brother.getChildNodes(), 0, brother.getNumItems());
+                brother.getChildNodes()[brother.getNumItems()] = null;
+                System.arraycopy(brother.getItemArray(), 1, brother.getItemArray(), 0, brother.getNumItems() - 1);
+                brother.removeItem();
+                logger.info("did current brother and brother is 3/4 nodes" + parent);
+                logger.info("current:" + current);
+            }
         }
 
+        if (brotherIsTowNode) {
+            logger.info("do  brother is 2 nodes" + parent);
+            logger.info("current:" + current);
+            //1.3.3将父节点中的key插入当前节点
+            current.insertItem(parentItem);
+            //1.3.4将兄弟节点中的key(只有一个)插入当前节点
+            current.insertItem(brother.getItemArray()[0]);
+            //1.3.5将兄弟节点的两个子节点(0,1)分别放入当前节点的(2,3)
+            current.connectChild(2, brother.disConnectChild(0));
+            current.connectChild(3, brother.disConnectChild(1));
 
+            if (parent.isTwoNode()) {
+                //父节点也是2节点，将当前节点设置为root
+                root = current;
+                current.setParent(null);
+            } else {
+                //1.3.6将父节点中的key值和和key值的右子节(兄弟节点)点从父节点中移除
+                System.arraycopy(parent.getChildNodes(), childIndex + 2, parent.getChildNodes(), childIndex + 1, parent.getNumItems() - childIndex - 1);
+                parent.disConnectChild(parent.getNumItems());
+                System.arraycopy(parent.getItemArray(), childIndex + 1, parent.getItemArray(), childIndex, parent.getNumItems() - childIndex - 1);
+                parent.removeItem();
+            }
+            logger.info("did  brother is 2 nodes" + parent);
+            logger.info("current:" + current);
+        }
     }
 
     /**
@@ -230,7 +366,7 @@ public class Tree234 {
         Stacks<Node> globalStack  = new Stacks<>();
         globalStack.push(root);
         //定义空白位置，
-        int nBlanks = 64;
+        int nBlanks = 256;
         boolean isRowEmpty = false;
         System.out.println("-------------------------------------------");
 
@@ -257,7 +393,7 @@ public class Tree234 {
                 } else {
                     System.out.print("-");
                 }
-                for (int i = 0; i < nBlanks -1; i++) {
+                for (int i = 0; i < nBlanks/2 -1; i++) {
                     System.out.print(" ");
                 }
             }

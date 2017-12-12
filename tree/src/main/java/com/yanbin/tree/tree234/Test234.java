@@ -28,6 +28,17 @@ public class Test234 {
                     DataItem dataItem = tree.find(getInt());
                     System.out.println("found:" + dataItem);
                     break;
+                case "d":
+                    System.out.print("Enter key to delete:");
+                    try {
+                        tree.delete(getInt());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+                    tree.displayTree();
+                    break;
                 case "quit":
                     isRunner = false;
                     System.out.println("Stop!!!");
