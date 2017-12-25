@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="011f9ee5-1e56-4209-880d-3214be542ae3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234Test.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/hash.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/Hash.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/HashTable/LinearHashTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/model/DataItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hash/src/test/java/com/yanbin/hash/LinearHashTableTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Node.java" afterPath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Test234.java" afterPath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Test234.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234.java" afterPath="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tree/src/test/java/com/yanbin/tree/Test.java" afterPath="$PROJECT_DIR$/tree/src/test/java/com/yanbin/tree/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/stacks/target/" />
     <ignored path="$PROJECT_DIR$/tree/target/" />
+    <ignored path="$PROJECT_DIR$/hash/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,35 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/DataItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-              <folding>
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-891">
-              <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Tree234.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6248">
+            <state relative-caret-position="8558">
               <caret line="395" column="45" lean-forward="false" selection-start-line="395" selection-start-column="45" selection-end-line="395" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -66,22 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tree/src/test/java/com/yanbin/tree/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="52" column="41" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="52" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tree234Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tree234Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="726">
               <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,28 +59,98 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeSet.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TreeSet.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tree/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4996">
-              <caret line="277" column="0" lean-forward="true" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+            <state relative-caret-position="638">
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hash.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/Hash.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinearHashTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/HashTable/LinearHashTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <element signature="e#4697#4698#0" expanded="true" />
-                <element signature="e#4742#4743#0" expanded="true" />
-                <element signature="e#10673#10674#0" expanded="true" />
-                <element signature="e#10716#10717#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test234.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Test234.java">
+      <file leaf-file-name="LinearHashTableTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hash/src/test/java/com/yanbin/hash/LinearHashTableTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="462">
+              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/model/DataItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+              <folding>
+                <element signature="e#170#171#0" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3806">
+              <caret line="415" column="4" lean-forward="false" selection-start-line="415" selection-start-column="4" selection-end-line="415" selection-end-column="4" />
+              <folding>
+                <element signature="e#15354#15384#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeSet.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TreeSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5104">
+              <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+              <folding>
+                <element signature="e#4697#4698#0" expanded="true" />
+                <element signature="e#4742#4743#0" expanded="true" />
+                <element signature="e#10673#10674#0" expanded="true" />
+                <element signature="e#10716#10717#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,6 +218,11 @@
         <option value="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Node.java" />
         <option value="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234.java" />
         <option value="$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234Test.java" />
+        <option value="$PROJECT_DIR$/hash/pom.xml" />
+        <option value="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/model/DataItem.java" />
+        <option value="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/Hash.java" />
+        <option value="$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/HashTable/LinearHashTable.java" />
+        <option value="$PROJECT_DIR$/hash/src/test/java/com/yanbin/hash/LinearHashTableTest.java" />
       </list>
     </option>
   </component>
@@ -195,7 +239,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -217,10 +261,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,37 +272,52 @@
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="stacks" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="stacks" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="stacks" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="stacks" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="stacks" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yanbin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
@@ -295,50 +351,6 @@
               <item name="tree" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="searchTree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="tree234" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="tree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tree" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -346,13 +358,20 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="Treeset&#9;PSI&#9;JAVA://java.util.TreeSet&#10;Test&#9;FILE&#9;file://D:/SpringDemo/algorithms/tree/src/test/java/com/yanbin/tree/Test.java&#10;Tr&#9;FILE&#9;file://D:/SpringDemo/algorithms/tree/src/main/java/com/yanbin/tree/searchTree/Tree.java&#10;arr&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java&#10;ArrayLis&#9;PSI&#9;JAVA://java.util.ArrayList&#10;Sta&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Stack.java&#10;Stack&#9;PSI&#9;JAVA://java.util.Stack&#10;List&#9;PSI&#9;JAVA://java.util.List" />
+    <property name="SearchEverywhereHistoryKey" value="Array&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java&#10;Treeset&#9;PSI&#9;JAVA://java.util.TreeSet&#10;Test&#9;FILE&#9;file://D:/SpringDemo/algorithms/tree/src/test/java/com/yanbin/tree/Test.java&#10;Tr&#9;FILE&#9;file://D:/SpringDemo/algorithms/tree/src/main/java/com/yanbin/tree/searchTree/Tree.java&#10;arr&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java&#10;ArrayLis&#9;PSI&#9;JAVA://java.util.ArrayList&#10;Sta&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Stack.java&#10;Stack&#9;PSI&#9;JAVA://java.util.Stack&#10;List&#9;PSI&#9;JAVA://java.util.List" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -366,15 +385,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Tree234Test">
-    <configuration name="Exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.LinearHashTableTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yanbin.tree.exercise.*" />
+          <option name="PATTERN" value="com.yanbin.hash.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.yanbin.tree.exercise.Exercise1" />
+      <option name="MAIN_CLASS_NAME" value="com.yanbin.hash.App" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -383,17 +402,17 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="tree" />
+      <module name="hash" />
       <envs />
     </configuration>
-    <configuration name="Exercise2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="LinearHashTableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yanbin.tree.exercise.*" />
+          <option name="PATTERN" value="com.yanbin.hash.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.yanbin.tree.exercise.Exercise2" />
+      <option name="MAIN_CLASS_NAME" value="com.yanbin.hash.LinearHashTableTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -402,7 +421,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="tree" />
+      <module name="hash" />
       <envs />
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -544,18 +563,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Exercise1" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Exercise2" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test234" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Tree234Test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test234" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Tree234Test" />
+      <item index="3" class="java.lang.String" itemvalue="Application.App" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LinearHashTableTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Tree234Test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test234" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Exercise2" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Exercise1" />
+        <item index="0" class="java.lang.String" itemvalue="Application.LinearHashTableTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Tree234Test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test234" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -590,15 +609,18 @@
       <workItem from="1512786813049" duration="11827000" />
       <workItem from="1512972843247" duration="13983000" />
       <workItem from="1513038838806" duration="7433000" />
-      <workItem from="1513052852489" duration="19404000" />
+      <workItem from="1513052852489" duration="19535000" />
+      <workItem from="1514168382187" duration="1470000" />
+      <workItem from="1514188648445" duration="4994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174192000" />
+    <option name="totallyTimeSpent" value="180787000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -608,25 +630,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6065217" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1402174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27065217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1663113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Sudoku" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19021739" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8576087" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8576087" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,42 +665,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/InToPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stacks/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/App.java" />
-    <entry file="file://$PROJECT_DIR$/stacks/src/main/java/com/yanbin/algorithms/structure/Structure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9130">
@@ -829,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6966">
-          <caret line="415" column="4" lean-forward="false" selection-start-line="415" selection-start-column="4" selection-end-line="415" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -854,10 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1196#1207#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,18 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="826">
           <caret line="46" column="5" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1232#1243#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tree/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
           <caret line="493" column="65" lean-forward="true" selection-start-line="493" selection-start-column="65" selection-end-line="493" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="150" column="17" lean-forward="false" selection-start-line="150" selection-start-column="17" selection-end-line="150" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,18 +877,18 @@
         <state relative-caret-position="396">
           <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#404#405#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Test234.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="704">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -936,7 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="1637" column="24" lean-forward="false" selection-start-line="1637" selection-start-column="24" selection-end-line="1637" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,33 +904,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="446" column="26" lean-forward="false" selection-start-line="446" selection-start-column="26" selection-end-line="446" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-891">
-          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        <state relative-caret-position="2442">
+          <caret line="112" column="36" lean-forward="false" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tree/src/test/java/com/yanbin/tree/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="1056">
+          <caret line="52" column="41" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="52" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6248">
+        <state relative-caret-position="8558">
           <caret line="395" column="45" lean-forward="false" selection-start-line="395" selection-start-column="45" selection-end-line="395" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -984,14 +943,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="271" column="6" lean-forward="false" selection-start-line="271" selection-start-column="6" selection-end-line="271" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/TreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4996">
-          <caret line="277" column="0" lean-forward="true" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+        <state relative-caret-position="5104">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
           <folding>
             <element signature="e#4697#4698#0" expanded="true" />
             <element signature="e#4742#4743#0" expanded="true" />
@@ -1003,8 +961,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tree/src/main/java/com/yanbin/tree/tree234/Tree234Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="726">
           <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tree/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/App.java" />
+    <entry file="file://$PROJECT_DIR$/hash/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3806">
+          <caret line="415" column="4" lean-forward="false" selection-start-line="415" selection-start-column="4" selection-end-line="415" selection-end-column="4" />
+          <folding>
+            <element signature="e#15354#15384#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/model/DataItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/Hash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/src/main/java/com/yanbin/hash/HashTable/LinearHashTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/src/test/java/com/yanbin/hash/LinearHashTableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1014,9 +1041,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>algorithms</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:3.8.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

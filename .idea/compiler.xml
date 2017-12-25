@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hash" />
         <module name="stacks" />
         <module name="tree" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="algorithms" target="1.8" />
+      <module name="hash" target="1.8" />
       <module name="stacks" target="1.8" />
       <module name="tree" target="1.8" />
     </bytecodeTargetLevel>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/algorithms.iml" filepath="$PROJECT_DIR$/algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hash/hash.iml" filepath="$PROJECT_DIR$/hash/hash.iml" />
       <module fileurl="file://$PROJECT_DIR$/stacks/stacks.iml" filepath="$PROJECT_DIR$/stacks/stacks.iml" />
       <module fileurl="file://$PROJECT_DIR$/tree/tree.iml" filepath="$PROJECT_DIR$/tree/tree.iml" />
     </modules>
