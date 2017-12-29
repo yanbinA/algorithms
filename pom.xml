@@ -16,6 +16,7 @@
         <module>stacks</module>
         <module>tree</module>
         <module>hash</module>
+        <module>heap</module>
     </modules>
 
     <dependencies>
