@@ -17,6 +17,8 @@
         <module>tree</module>
         <module>hash</module>
         <module>heap</module>
+        <module>graph</module>
+        <module>graph</module>
     </modules>
 
     <dependencies>

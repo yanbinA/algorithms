@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="graph" />
         <module name="hash" />
         <module name="heap" />
         <module name="stacks" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="algorithms" target="1.8" />
+      <module name="graph" target="1.8" />
       <module name="hash" target="1.8" />
       <module name="heap" target="1.8" />
       <module name="stacks" target="1.8" />
