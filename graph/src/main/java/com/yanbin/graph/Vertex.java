@@ -7,8 +7,13 @@ package com.yanbin.graph;
  * @date 2017/12/30 16:16
  */
 public class Vertex {
-
+    /**
+     * 顶点标签
+     */
     private char label;
+    /**
+     * 该定点是否已被访问，false:未被访问，true已被访问
+     */
     private boolean wasVisited;
 
     public Vertex(char label) {
@@ -30,5 +35,10 @@ public class Vertex {
 
     public void setWasVisited(boolean wasVisited) {
         this.wasVisited = wasVisited;
+    }
+
+    @Override
+    public String toString() {
+        return this.label + "";
     }
 }

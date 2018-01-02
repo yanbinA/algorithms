@@ -1,5 +1,9 @@
 package com.yanbin.graph;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * 图结构
  * @author yanbin
@@ -55,5 +59,81 @@ public class Graph {
         adjMat[end][start] = 1;
     }
 
+    /**
+     * 深度优先搜索 遍历整个图
+     * 1.任取一个顶点作为当前顶点(选用vertexList[0]),标记已读，放入栈
+     *      2.1.如果可能，访问一个邻接且未访问的顶点，标记，并放入栈。
+     *      2.2.当不能执行2.1时，如果栈非空，则栈中弹出一个顶点。
+     *      2.3.如果2.1和2.2都不能执行，则完成整个搜索过程。
+     */
+    public void depthFirstSearch() {
+        //栈存放顶点下标
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
+        vertexList[0].setWasVisited(true);
+        displayVertex(0);
 
+        while (!stack.empty()) {
+            int index = getAdjUnvisitedVertex(stack.peek());
+            if (index == -1) {
+                stack.pop();
+            } else {
+                vertexList[index].setWasVisited(true);
+                stack.push(index);
+                displayVertex(index);
+            }
+        }
+        for (Vertex vertex : vertexList) {
+            vertex.setWasVisited(false);
+        }
+
+    }
+
+    /**
+     * 寻找邻接且未访问的顶点
+     * @param index 当前顶点的下标
+     * @return  目标顶点的小标，-1表示没有符合条件的顶点
+     */
+    private int getAdjUnvisitedVertex(Integer index) {
+        for (int i = 0; i < nVerts; i++) {
+            if (adjMat[index][i] == 1 && !vertexList[index].isWasVisited()) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 广度优先搜索
+     *  1.任取一个顶点作为当前顶点(选用vertexList[0]),标记已读，放入列队
+     *      2.1.如果可能，访问当前顶点的所有邻接且未访问的顶点，标记，并放入列队。
+     *      2.2.当不能执行2.1时，如果列队非空，则列队中弹出一个顶点作为当前顶点。
+     *      2.3.如果2.1和2.2都不能执行，则完成整个搜索过程。
+     */
+    public void breadthFirstSearch() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(0);
+        displayVertex(0);
+        vertexList[0].setWasVisited(true);
+
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < nVerts; i++) {
+                if (adjMat[queue.element()][i] == 1 && !vertexList[i].isWasVisited()) {
+                    vertexList[i].setWasVisited(true);
+                    queue.offer(i);
+                    displayVertex(i);
+                }
+            }
+            queue.poll();
+        }
+
+        for (Vertex vertex : vertexList) {
+            vertex.setWasVisited(false);
+        }
+    }
+
+
+    public void displayVertex(int v) {
+        System.out.print(vertexList[v]);
+    }
 }
