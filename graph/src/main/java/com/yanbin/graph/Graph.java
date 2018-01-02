@@ -83,8 +83,8 @@ public class Graph {
                 displayVertex(index);
             }
         }
-        for (Vertex vertex : vertexList) {
-            vertex.setWasVisited(false);
+        for (int i = 0; i <  nVerts; i++) {
+            vertexList[i].setWasVisited(false);
         }
 
     }
@@ -96,7 +96,7 @@ public class Graph {
      */
     private int getAdjUnvisitedVertex(Integer index) {
         for (int i = 0; i < nVerts; i++) {
-            if (adjMat[index][i] == 1 && !vertexList[index].isWasVisited()) {
+            if (adjMat[index][i] == 1 && !vertexList[i].isWasVisited()) {
                 return i;
             }
         }
@@ -126,9 +126,8 @@ public class Graph {
             }
             queue.poll();
         }
-
-        for (Vertex vertex : vertexList) {
-            vertex.setWasVisited(false);
+        for (int i = 0; i <  nVerts; i++) {
+            vertexList[i].setWasVisited(false);
         }
     }
 
