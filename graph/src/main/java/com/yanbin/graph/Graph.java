@@ -1,5 +1,6 @@
 package com.yanbin.graph;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -83,10 +84,7 @@ public class Graph {
                 displayVertex(index);
             }
         }
-        for (int i = 0; i <  nVerts; i++) {
-            vertexList[i].setWasVisited(false);
-        }
-
+        Arrays.stream(vertexList).filter(vertex -> vertex != null).forEach(vertex -> vertex.setWasVisited(false));
     }
 
     /**
@@ -126,11 +124,36 @@ public class Graph {
             }
             queue.poll();
         }
-        for (int i = 0; i <  nVerts; i++) {
-            vertexList[i].setWasVisited(false);
-        }
+        Arrays.stream(vertexList).filter(vertex -> vertex != null).forEach(vertex -> vertex.setWasVisited(false));
     }
 
+    /**
+     * 最小生成树
+     */
+    public Graph minSpanningTree() {
+        Graph mst = new Graph();
+        //利用深度优先搜索 遍历整个图
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);
+        vertexList[0].setWasVisited(true);
+        mst.addVertex(vertexList[0]);
+
+        while (!stack.empty()) {
+            int index = getAdjUnvisitedVertex(stack.peek());
+            if (index == -1) {
+                Integer end = stack.pop();
+                if (!stack.empty()) {
+                    mst.addEdge(stack.peek(), end);
+                }
+            } else {
+                vertexList[index].setWasVisited(true);
+                stack.push(index);
+                mst.addVertex(vertexList[index]);
+            }
+        }
+        Arrays.stream(vertexList).filter(vertex -> vertex != null).forEach(vertex -> vertex.setWasVisited(false));
+        return mst;
+    }
 
     public void displayVertex(int v) {
         System.out.print(vertexList[v]);
