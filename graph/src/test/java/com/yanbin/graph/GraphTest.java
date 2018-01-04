@@ -30,7 +30,10 @@ public class GraphTest {
         graph.addEdge(6, 7);
 
         System.out.println("--------------------");
-        graph.topo();
+        graph.display();
+        System.out.println("--------------------");
+        graph.warshall();
+        graph.display();
     }
 
 }

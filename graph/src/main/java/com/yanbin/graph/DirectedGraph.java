@@ -1,5 +1,6 @@
 package com.yanbin.graph;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -129,5 +130,42 @@ public class DirectedGraph {
             return row;
         }
         return -1;
+    }
+
+    /**
+     * 修改邻接矩阵 使其表示从顶点与顶点间是否连通
+     *  如果A到B,B到C,那么A可以到C;
+     *  1.寻找该顶点的后顶点；
+     *  2.寻找该顶点的前顶点；
+     *  3.连通前后顶点
+     */
+    public void warshall() {
+        for (int y = 0; y < nVerts; y++) {
+            //遍历每一行，
+            for (int x = 0; x < nVerts; x++) {
+                //遍历每行中的单元，寻找是否存在后顶点
+                if (adjMat[y][x] == 1) {
+                    //找到一个后顶点，寻找前顶点
+                    for (int z = 0; z < nVerts; z++) {
+                        if (adjMat[z][y] == 1) {
+                            //连通两个顶点
+                            adjMat[z][x] = 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void display() {
+        for (int i = 0; i < nVerts; i++) {
+            System.out.print(vertexList[i] + " line to:");
+            for (int j = 0; j < nVerts; j++) {
+                if (adjMat[i][j] == 1) {
+                    System.out.print(vertexList[j] + " ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
