@@ -155,6 +155,27 @@ public class Graph {
         return mst;
     }
 
+    /**
+     * 利用广度优先搜索 生成最小树
+     */
+    public void minSpanningTreeByBFS() {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(0);
+        vertexList[0].setWasVisited(true);
+
+        while (!queue.isEmpty()) {
+            for (int i = 0; i < nVerts; i++) {
+                if (adjMat[queue.element()][i] == 1 && !vertexList[i].isWasVisited()) {
+                    vertexList[i].setWasVisited(true);
+                    queue.offer(i);
+                    System.out.println(vertexList[queue.element()] + "" + vertexList[i]);
+                }
+            }
+            queue.poll();
+        }
+        Arrays.stream(vertexList).filter(vertex -> vertex != null).forEach(vertex -> vertex.setWasVisited(false));
+    }
+
     public void displayVertex(int v) {
         System.out.print(vertexList[v]);
     }
