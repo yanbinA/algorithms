@@ -40,10 +40,43 @@ public class KnightTravel {
     private void initialize() {
         this.nVertex = length * length;
         this.vertexList = new Vertex[nVertex];
-        IntStream.range(0, nVertex).mapToObj(i -> new Vertex((char) (i + 1))).collect(Collectors.toList()).toArray(vertexList);
-        
+        adjMate = new int[nVertex][nVertex];
+        IntStream.range(0, nVertex).mapToObj(i -> new Vertex((char) (i + '1'))).collect(Collectors.toList()).toArray(vertexList);
+        initAdjMate();
+
     }
 
+    /**
+     * 初始化方块连通关系
+     */
+    private void initAdjMate() {
+        //设置默认值
+        for (int i = 0; i < nVertex; i++) {
+            for (int j = 0; j < nVertex; j++) {
+                adjMate[i][j] = 0;
+            }
+        }
+
+        for (int i = 0; i < nVertex; i++) {
+            //添加当前方块的 右 和 下的关系
+            if (i % length != length - 1) {
+                //不是边
+                addAdjMate(i, i + 1);
+            }
+            if (i + length < nVertex) {
+                addAdjMate(i, i + length);
+            }
+        }
 
 
+    }
+
+    private void addAdjMate(int start, int end) {
+        adjMate[start][end] = 1;
+        adjMate[end][start] = 1;
+    }
+
+    public void display() {
+
+    }
 }

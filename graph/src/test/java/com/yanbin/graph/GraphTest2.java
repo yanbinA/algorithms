@@ -42,6 +42,8 @@ public class GraphTest2 {
         graph.addEdge(3, 4);
 
         graph.depthFirstSearch();
+
+        new KnightTravel(3);
     }
 
 
