@@ -26,7 +26,7 @@ public class GraphTest2 {
         graph.addEdge(3, 4);
 
         graph.minSpanningTreeByBFS();*/
-        GraphLinkList graph = new GraphLinkList();
+        /*GraphLinkList graph = new GraphLinkList();
         graph.addVertex(new Vertex('A'));
         graph.addVertex(new Vertex('B'));
         graph.addVertex(new Vertex('C'));
@@ -41,9 +41,12 @@ public class GraphTest2 {
         graph.addEdge(2, 4);
         graph.addEdge(3, 4);
 
-        graph.depthFirstSearch();
+        graph.depthFirstSearch();*/
 
-        new KnightTravel(3);
+        KnightTravel travel = new KnightTravel(3, 3);
+        //travel.deleteVertex(1, 1);
+
+        travel.runAndSave(0,0);
     }
 
 
