@@ -249,4 +249,11 @@ public class KnightTravel {
         }
         System.out.println();
     }
+
+    public static void main(String args[]) {
+        KnightTravel knightTravel = new KnightTravel(3, 3);
+        knightTravel.deleteVertex(0, 1);
+        knightTravel.display();
+        knightTravel.run(0,0);
+    }
 }

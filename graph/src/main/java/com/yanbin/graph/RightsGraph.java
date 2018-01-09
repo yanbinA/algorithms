@@ -1,8 +1,6 @@
 package com.yanbin.graph;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 import java.util.stream.IntStream;
 
 /**
@@ -50,14 +48,70 @@ public class RightsGraph {
         int nTree = 0;
         while (nTree < nVertex - 1) {
             //将当前节点的所有可用边放入列队
-            
+            vertexList[currentVertex].setWasVisited(true);
+            nTree++;
+            int start = currentVertex;
+            IntStream.range(0, MAX_VERTEXS).forEach(i -> {
+                if (adjMate[start][i] != Integer.MAX_VALUE && !vertexList[i].isWasVisited()) {
+                    queue.add(new Edge(start, i, adjMate[start][i]));
+                }
+            });
+            //删除无用边
+            deleteEdge(queue);
+            if (queue.isEmpty()) {
+                System.out.println("No connection！");
+            }
+            //获取权值最小边
+            Edge edge = queue.poll();
+            int srcVertex = edge.getSrcVertex();
+            currentVertex = edge.getDestVertex();
+            System.out.print(vertexList[srcVertex].getLabel() + " to " + vertexList[currentVertex] + "\n");
+
         }
+        IntStream.range(0, nVertex).forEach(i -> vertexList[i].setWasVisited(false));
+    }
+
+    /**
+     * 删除queue中的无用边
+     * @param queue 列队
+     */
+    private void deleteEdge(PriorityQueue<Edge> queue) {
+        Iterator<Edge> iterator = queue.iterator();
+        for (; iterator.hasNext();) {
+            Edge edge = iterator.next();
+            if (vertexList[edge.getSrcVertex()].isWasVisited() && vertexList[edge.getDestVertex()].isWasVisited()) {
+                iterator.remove();
+            }
+        }
+
     }
 
     public void displayVertex(int v) {
         System.out.print(vertexList[v]);
     }
 
+    public static void main(String[] args) {
+        RightsGraph graph = new RightsGraph();
+        graph.addVertex('A');
+        graph.addVertex('B');
+        graph.addVertex('C');
+        graph.addVertex('D');
+        graph.addVertex('E');
+        graph.addVertex('F');
+        graph.addAdjMate(0,1,6);
+        graph.addAdjMate(0,3,4);
+        graph.addAdjMate(1,2,10);
+        graph.addAdjMate(1,3,7);
+        graph.addAdjMate(1,4,7);
+        graph.addAdjMate(2,3,8);
+        graph.addAdjMate(2,4,5);
+        graph.addAdjMate(2,5,6);
+        graph.addAdjMate(3,4,12);
+        graph.addAdjMate(4,5,7);
+        graph.mstw(0);
+        System.out.println();
+        graph.mstw(2);
+    }
 }
 
 class Edge {
